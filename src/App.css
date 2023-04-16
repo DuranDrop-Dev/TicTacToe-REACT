@@ -3,6 +3,7 @@ body {
 }
 
 h1 {
+  font-size: 19pt;
   color: #61dafb;
 }
 
@@ -44,12 +45,15 @@ ol {
 
 .square {
   display: flex;
-  width: 33px;
-  height: 33px;
+  justify-content: center;
+  align-items: center;
+  width: 100px;
+  height: 100px;
   padding: 10px;
+  font-size: 32pt;
   font-family: Arial, Helvetica, sans-serif;
   font-weight: bold;
-  border: .7px solid #61dafb;
+  border: 1px solid #61dafb;
   background: #282c34;
   color: #61dafb;
 }
@@ -65,7 +69,7 @@ ol {
 
 .game {
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: 2fr 1fr;
 }
 
 .game-board {
@@ -79,7 +83,7 @@ ol {
   color: #282c34;
   border: 0px;
   padding: 4px;
-  margin-bottom: 4px;
+  margin-bottom: 12px;
   border-radius: 4px;
 }
 
@@ -89,5 +93,13 @@ ol {
   }
   to {
     transform: rotate(360deg);
+  }
+}
+
+@media (orientation: portrait) {
+  .game {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 20px;
   }
 }
